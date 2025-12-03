@@ -37,18 +37,20 @@ export function Header() {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white shadow-sm backdrop-blur-sm' 
+          ? 'bg-orange-400 shadow-sm backdrop-blur-sm' 
           : 'bg-transparent'
       }`}>
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <span className={`text-2xl font-bold tracking-tight transition-colors ${
-              isScrolled ? 'text-blue-950' : 'text-white'
-            }`}>
-              Kz <span className="text-orange-600">Crafting</span>
-            </span>
-          </div>
+        <div className="flex items-center space-x-2">
+  <span className={`text-2xl font-bold tracking-tight transition-colors ${
+    isScrolled ? 'text-blue-950' : 'text-white'
+  }`}>
+    Kz <span className={`transition-colors ${
+      isScrolled ? 'text-white':'text-orange-600'
+    }`}>Crafting</span>
+  </span>
+</div>
 
           {/* 3-Dot Menu Button */}
           <button
